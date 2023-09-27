@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/pendaftaran.css">
+    <title>Daftar</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Form Pendaftaran</h1>
+
+        <label for="name">Nama</label>
+        <input type="text" placeholder="Masukkan Nama Anda..." name="nama" required>
+
+        <label for="gender">Jenis Kelamin</label>
+        <select required>
+            <option>Pilih Jenis Kelamin</option>
+            <option>Laki-laki</option>
+            <option>Perempuan</option>
+        </select>
+
+        <label for="date">Tanggal Lahir</label>
+        <input type="date" required>
+
+        <label for="phone-number">Nomor Telepon/Whatsapp</label>
+        <input type="number" placeholder="Masukkan Nomor Telepon/Whatsapp anda..." name="nomor" required>
+
+        <label for="email">Email</label>
+        <input type="text" placeholder="Masukkan Email Anda..." name="email" required>
+
+        <label for="konseling">Jenis Konseling</label>
+        <select required>
+            <option>Pilih Jenis Konseling</option>
+            <option>Konseling Offline</option>
+            <option>Konseling Online</option>
+            <option>Seminar Rutin</option>
+        </select>
+
+        <div class="button">
+            <button type="button" class="cancelBtn">Batalkan</button>
+            <button type="submit" class="submitBtn">Daftar</button>
+        </div>
+    </div>
+</body>
+</html>

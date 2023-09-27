@@ -46,6 +46,10 @@ a{
     font-size: 1rem;   
 }
 
+nav .links .current-page{
+    color:#de1b51;
+}
+
 a:hover{
     color: #de1b51;
 }

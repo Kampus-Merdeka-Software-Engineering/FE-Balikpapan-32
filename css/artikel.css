@@ -7,7 +7,7 @@
 
 body{
     height: 100px;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     background-size: cover;
 }
 
@@ -75,7 +75,6 @@ nav .toggle_btn{
     height: 0;
     width: 80%;
     background: rgba(255, 255, 255, 1);
-    /* backdrop-filter: blur(15px); */
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 2;
@@ -113,34 +112,36 @@ nav .toggle_btn{
     color: #ffffff;
 }
 
-.content-section{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.artikel{
+    margin:86px 48px 60px 48px;
     text-align: justify;
 }
 
-.content-section img{
+.artikel-content{
+    display:flex;
+}
+.card {
     width: 100%;
-    height: 400px;
+    height: auto;
+    grid-column: span 8;
+    margin: 10px 20px 0 0;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+}
+
+.head-card img {
+    width: 100%;
+    height: 144px;
     object-fit: cover;
-    object-position: 0px 25%;
-    margin-bottom: 20px;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
+.body-card {
+    padding: 10px 15px;
 }
 
-.intro{
-    width: 100%;
-    margin: 0 20px 0 10px;
-}
-
-.visi-misi{
-    margin: 0 10px 0 0;
+.body-card h1 {
+    margin: 0;  
 }
 
 footer{
