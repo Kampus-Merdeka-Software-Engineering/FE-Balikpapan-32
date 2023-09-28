@@ -198,6 +198,7 @@ nav .toggle_btn{
 .about{
     background-image: url(../Asset/Beranda-tentang/Backgroundred.png);
     color: #ffffff;
+    height: 100vh;
 }
 .about h1{
     display: flex;
@@ -268,6 +269,89 @@ nav .toggle_btn{
     margin: 0;  
 }
 
+.testimoni{
+    background-image: url(../Asset/Beranda/Beranda\ Testimoni/Background-red.png);
+    width:100%;
+    height: 100vh;
+    padding: 5%;
+}
+
+.testimoni h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 48px;
+}
+.testimoni .wrap-card{
+    display: flex;
+}
+.testimoni .card {
+    width: 220px;
+    height: 152px;
+    margin: 0 20px 0 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.testimoni .card .card-content{
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.feedback-form{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 15%;
+}
+
+.feedback-form h1{
+    text-align: center;
+    margin-bottom: 10%;
+    font-size: 48px;
+}
+
+.wrap-feedback{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.feedback-form .nama{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 12px;
+    margin-bottom: 24px;
+    line-height: 2em;
+    border-radius: 3px;
+    border: 1px solid #dbe4e4;
+    box-shadow: none;
+    outline: none;
+}
+
+.feedback-form .feedback{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 12px 10% 12px;
+    line-height: 2em;
+    border-radius: 3px;
+    border: 1px solid #dbe4e4;
+    box-shadow: none;
+    outline: none;
+}
+
+.submitfeedback{
+    margin-top: 1%;
+    padding: 10px;
+    width: 10%;
+    background-color: #de1b51;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24;
+    font-weight: bold;
+    border-radius: 6px;
+}
 footer{
     display: flex;
     width:100%;
