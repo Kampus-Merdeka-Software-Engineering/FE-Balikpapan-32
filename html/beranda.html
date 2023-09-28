@@ -10,12 +10,13 @@
             integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
-        <!-- <script src="dokterpage.js"></script> -->
+        <!-- <script src="../js/beranda.js"></script> -->
         <link rel="stylesheet" href="../css/beranda.css" />
         <title>Caring is Loving</title>
     </head>
     
     <body>
+        <div id="preloader"></div>
         <header>
             <!-- navbar -->
             <nav>
@@ -205,6 +206,7 @@
                     <button type="submit" class="submitfeedback">Submit</button>
                 </div>
             </section>
+            
 
         <footer>
             <div class="socmed">
@@ -233,7 +235,6 @@
                 </div>
                 <p>Jalan jalan ke kota kudus, jangan lupa beli mi sedus</p>
             </div>
-
         </footer>
 
 
@@ -253,6 +254,10 @@
                 ? 'fa-solid fa-xmark'
                 : 'fa-solid fa-bars'
 }
+            const loader = document.getElementById("preloader");
+            window.addEventListener("load", function(){
+                loader.style.display = "none";
+            })
         </script>
     </body>
 </html>
