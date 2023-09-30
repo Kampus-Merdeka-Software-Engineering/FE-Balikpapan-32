@@ -149,7 +149,12 @@ nav .toggle_btn{
 }
 
 .body-card h1 {
-    margin: 0;  
+    margin: 0;
+    text-align: center; 
+}
+.body-card p{
+    text-align: justify;
+    padding: 7%;
 }
 
 footer{

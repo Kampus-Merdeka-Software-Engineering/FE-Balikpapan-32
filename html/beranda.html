@@ -20,7 +20,7 @@
             <!-- navbar -->
             <nav>
                 <div class="logo">
-                    <a href="tentangkami.html"><img  src="../Asset/Beranda Awal/Logo.png" height="45px" width="45px" alt="Logo Caring is Loving">Caring Is Loving</a>
+                    <a href="./beranda.html"><img  src="../Asset/Beranda Awal/Logo.png" height="45px" width="45px" alt="Logo Caring is Loving">Caring Is Loving</a>
                 </div>
                 <ul class="links">
                     <li><a class="current-page" href="./beranda.html">Beranda</a></li>
@@ -70,31 +70,41 @@
                 <div class="wrap-layanan">
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Layanan/Konsul Offline.jpg" alt="konseling offline">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Offline</h2>
+                            <p>Kamu bisa Konseling dengan
+                                datang langsung ke Layanan
+                                kami secara offline, dengan
+                                tempat yang nyaman untuk
+                                bercerita.</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Layanan/Konsul Online.jpg" alt="konseling online">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Online</h2>
+                            <p>Dengan Konseling online kamu
+                                bisa memilih jadwal dan tempat
+                                sesuai dengan kenyamananmu.</p>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Layanan/Seminar Rutin.jpg" alt="seminar rutin">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Seminar Rutin</h2>
+                            <p>Kami mempunyai agenda
+                                seminar ruting melalui Zoom
+                                Meeting dengan topik
+                                kesehatan mental yang menarik
+                                untuk dibahas.</p>
                         </div>
                     </div>
                 </div>
@@ -114,12 +124,18 @@
                             <input class="isi" type="text" placeholder="Masukkan Email Anda..." name="email" required>
 
                             <label for="konseling">Jenis Konseling</label>
-                            <select class="isi" required>
-                            <option value="" disabled selected hidden>Pilih Jenis Konseling</option>
+                            <select id="konseling" class="isi" required>
+                            <option value="" disabled selected hidden>---Pilih Jenis Konseling---</option>
                             <option value="konselingoffline">Konseling Offline</option>
                             <option value="konselingonline">Konseling Online</option>
                             <option value="seminar">Seminar Rutin</option>
-                        </select>
+                            </select>
+
+                            <label for="dokter">Pilih Dokter</label>
+                            <select id="dokter" name="dokter" class="isi" required>
+                            <option value="" disabled selected hidden>---Pilih jenis konseling terlebih dahulu---</option>
+
+                            </select>
                         </div>
                         <div class="button-submit-formulir">
                             <button type="submit" id="submitForm" class="submit-formulir">Daftar</button>
@@ -154,41 +170,63 @@
                 <div class="wrap-konsultasi">
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Paket Konsultasi/Paket Offline Individu.jpg" alt="Paket Offline Individu">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Offline Individu</h2>
+                            <h5>Rp399.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Berlokasi di kota Balikpapan</li>
+                                <li>Bertemu langsung dengan dokter</li>
+                                <li>Konsultasi selama 1 jam</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Paket Konsultasi/Konseling Offline Paket Bersama.jpg" alt="Paket Offline Berpasangan">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Offline Berpasangan</h2>
+                            <h5>Rp459.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Berlokasi di kota Balikpapan</li>
+                                <li>Bertemu langsung dengan dokter</li>
+                                <li>Konsultasi selama 1 jam</li>
+                                <li>Bersama pasangan</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Paket Konsultasi/Konseling Online Paket Individu.jpg" alt="Paket Online Individu">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Online Individu</h2>
+                            <h5>Rp199.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Dilakukan via zoom meeting</li>
+                                <li>fleksibel</li>
+                                <li>Konsultasi selama 1 jam</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="card">
                         <div class="head-card">
-                            <img src="" alt="">
+                            <img src="../Asset/Beranda/Beranda Paket Konsultasi/Konseling Online Paket Bersama.jpg" alt="Paket Online Berpasangan">
                         </div>
                         <div class="body-card">
-                            <h2>Judul</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
+                            <h2>Konseling Online Berpasangan</h2>
+                            <h5>Rp259.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Dilakukan via zoom meeting</li>
+                                <li>fleksibel</li>
+                                <li>Konsultasi selama 1 jam</li>
+                                <li>Bersama pasangan</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -257,7 +295,7 @@
                     <i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i>
                     <h1>Alamat Kami</h1>
                 </div>
-                <p>Jalan jalan ke kota kudus, jangan lupa beli mi sedus</p>
+                <p>Jl. DI. Panjaitan Balikpapan Kalimantan Timur</p>
             </div>
         </footer>
         
