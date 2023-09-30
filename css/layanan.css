@@ -31,6 +31,8 @@ nav{
 }
 
 nav .logo a{
+    display: flex;
+    align-items: center;
     font-size: 1.5rem;
     font-weight: 500;
     color: #de1b51;
@@ -191,6 +193,7 @@ footer .footer-links li a:hover{
 
 footer .footer-location .location-icon{
     display: flex;
+    align-items: center;
 }
 
 /* responsive design */
@@ -298,4 +301,12 @@ footer .footer-location .location-icon{
         justify-content: space-evenly;
         width: 100%;
     }
+}
+
+#preloader{
+    background: #ffffff url(../Asset/loader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }

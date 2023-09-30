@@ -10,7 +10,7 @@ body{
     background-color: red;
     display: flex;
 }
-.container{
+.modal-form{
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -20,18 +20,18 @@ body{
     padding: 3% 1%;
 }
 
-.container h1{
+.modal-form h1{
     display: flex;
     justify-content: center;
 }
 
-.container .formulir{
+.modal-form .formulir{
     display: flex;
     flex-direction: column;
     margin: 10px;
 }
 
-.container .formulir .isi{
+.modal-form .formulir .isi{
     box-sizing: border-box;
     width: 100%;
     padding: 6px 12px;
@@ -61,7 +61,7 @@ body{
     text-align: center;
 }
 
-.aftersubmit{
+.modal-submit{
     display: flex;
     flex-direction: column;
     width: 35%;
@@ -74,7 +74,7 @@ body{
     text-align: justify;
 }
 
-.aftersubmit img{
+.modal-submit img{
     width: 65%;
     height: auto;
 }

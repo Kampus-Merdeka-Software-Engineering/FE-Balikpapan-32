@@ -16,6 +16,7 @@
     </head>
 
     <body>
+        <div id="preloader"></div>
         <header>
             <nav>
                 <div class="logo">
@@ -34,11 +35,11 @@
             </nav>
             
             <div class="dropdown_menu">
-                <li><a href="">Beranda</a></li>
-                <li><a href="">Layanan</a></li>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="dokter.html">Dokter</a></li>
-                <li><a href="">Artikel</a></li>
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
             </div>
         </header>
 
@@ -180,23 +181,23 @@
         </section>
 
         <footer>
-            <div class="socmed">
+            <div id="social" class="socmed">
                 <h1>Social Media</h1>
                 <div class="socmed-icon">
-                    <a href=""><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
-                    <a href=""><i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://instagram.com"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://x.com"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://facebook.com"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://linkedin.com"><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://web.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i></a>
                 </div>
             </div>
 
             <div class="footer-links">
-                <li><a href="">Beranda</a></li>
-                <li><a href="">Layanan</a></li>
+                <li><a href="beranda.html">Beranda</a></li>
+                <li><a href="layanan.html">Layanan</a></li>
                 <li><a href="dokter.html">Dokter</a></li>
-                <li><a href="">Artikel</a></li>
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
             </div>
 
             <div class="footer-location">
@@ -206,26 +207,7 @@
                 </div>
                 <p>Jalan jalan ke kota kudus, jangan lupa beli mi sedus</p>
             </div>
-
         </footer>
-
-
-
-
-
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
-
-            toggleBtn.onclick = function (){
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
-
-            toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
-}
-        </script>
     </body>
+    <script src="../js/artikel.js"></script>
 </html>

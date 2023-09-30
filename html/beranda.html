@@ -35,11 +35,11 @@
             </nav>
             <!-- dropdown menu -->
             <div class="dropdown_menu">
-                <li><a href="">Beranda</a></li>
+                <li><a href="beranda.html">Beranda</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="">Dokter</a></li>
-                <li><a href="">Artikel</a></li>
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="dokter.html">Dokter</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
             </div>
         </header>
 
@@ -98,9 +98,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="button">
-                    <button type="button" class="daftar">Daftar Sekarang</button>
+                <div class="button-form">
+                    <button id="myBtn">Daftar Sekarang</button>
                 </div>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Form Pendaftaran</h1>
+                        <div class="isian-form">
+                            <label for="name">Nama</label>
+                            <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama" required>
+
+                            <label for="email">Email</label>
+                            <input class="isi" type="text" placeholder="Masukkan Email Anda..." name="email" required>
+
+                            <label for="konseling">Jenis Konseling</label>
+                            <select class="isi" required>
+                            <option value="" disabled selected hidden>Pilih Jenis Konseling</option>
+                            <option value="konselingoffline">Konseling Offline</option>
+                            <option value="konselingonline">Konseling Online</option>
+                            <option value="seminar">Seminar Rutin</option>
+                        </select>
+                        </div>
+                        <div class="button-submit-formulir">
+                            <button type="submit" id="submitForm" class="submit-formulir">Daftar</button>
+                        </div>
+                    </div>
+                    </div>
             </section>
 
             <section class="about">
@@ -220,11 +245,11 @@
             </div>
 
             <div class="footer-links">
-                <li><a href="">Beranda</a></li>
+                <li><a href="beranda.html">Beranda</a></li>
                 <li><a href="layanan.html">Layanan</a></li>
-                <li><a href="">Dokter</a></li>
-                <li><a href="">Artikel</a></li>
-                <li><a href="">Tentang Kami</a></li>
+                <li><a href="dokter.html">Dokter</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="tentangkami.html">Tentang Kami</a></li>
             </div>
 
             <div class="footer-location">

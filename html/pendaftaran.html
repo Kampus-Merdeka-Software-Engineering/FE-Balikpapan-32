@@ -7,34 +7,21 @@
     <title>Daftar</title>
 </head>
 <body>
-    <div class="container">
+    <div class="modal-form">
         <h1>Form Pendaftaran</h1>
         <div class="formulir">
         <label for="name">Nama</label>
         <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama" required>
-
-        <label for="gender">Jenis Kelamin</label>
-        <select class="isi" required>
-            <option>Pilih Jenis Kelamin</option>
-            <option>Laki-laki</option>
-            <option>Perempuan</option>
-        </select>
-
-        <label for="date">Tanggal Lahir</label>
-        <input class="isi" type="date" required>
-
-        <label for="phone-number">Nomor Telepon/Whatsapp</label>
-        <input class="isi" type="number" placeholder="Masukkan Nomor Telepon/Whatsapp anda..." name="nomor" required>
 
         <label for="email">Email</label>
         <input class="isi" type="text" placeholder="Masukkan Email Anda..." name="email" required>
 
         <label for="konseling">Jenis Konseling</label>
         <select class="isi" required>
-            <option>Pilih Jenis Konseling</option>
-            <option>Konseling Offline</option>
-            <option>Konseling Online</option>
-            <option>Seminar Rutin</option>
+            <option value="" disabled selected hidden>Pilih Jenis Konseling</option>
+            <option value="konselingoffline">Konseling Offline</option>
+            <option value="konselingonline">Konseling Online</option>
+            <option value="seminar">Seminar Rutin</option>
         </select>
         </div>
         
@@ -44,7 +31,7 @@
         </div>
     </div>
 
-    <div class="aftersubmit">
+    <div id="aftersubmit" class="modal-submit">
         <h1>Formulir telah tersimpan!</h1>
         <img src="../Asset/Beranda Awal/Logo.png" alt="logo">
         <p>Hai, (Nama Lengkap). Terima kasih sudah mendaftarkan dirimu

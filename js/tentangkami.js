@@ -25,20 +25,3 @@ const myFunction = (e) => {
 }
 
 socialMedia.addEventListener('click', myFunction, false);
-
-// Modal formulir
-const modal = document.getElementById("myModal");
-const formBtn = document.getElementById("myBtn");
-const span = document.getElementsByClassName("close")[0];
-
-formBtn.onclick = function() {
-    modal.style.display = "block";
-}
-span.onclick = function() {
-    modal.style.display = "none";
-}
-window.onclick = function(event) {
-    if (event.target == modal) {
-    modal.style.display = "none";
-}
-}
