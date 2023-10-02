@@ -121,7 +121,7 @@
                             <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama" required>
 
                             <label for="email">Email</label>
-                            <input class="isi" type="text" placeholder="Masukkan Email Anda..." name="email" required>
+                            <input class="isi" type="email" placeholder="Masukkan Email Anda..." name="email" required>
 
                             <label for="konseling">Jenis Konseling</label>
                             <select id="konseling" class="isi" required>
@@ -129,7 +129,8 @@
                             <option value="konselingoffline">Konseling Offline</option>
                             <option value="konselingonline">Konseling Online</option>
                             <option value="seminar">Seminar Rutin</option>
-                            </select>
+                            </select> 
+
 
                             <label for="dokter">Pilih Dokter</label>
                             <select id="dokter" name="dokter" class="isi" required>
@@ -138,7 +139,7 @@
                             </select>
                         </div>
                         <div class="button-submit-formulir">
-                            <button type="submit" id="submitForm" class="submit-formulir">Daftar</button>
+                            <button type="submit" id="submitForm" class="submit-formulir" value="kirimForm">Daftar</button>
                         </div>
                     </div>
                     </div>
@@ -235,28 +236,7 @@
             <section class="testimoni">
                 <h1>Testimoni</h1>
                 <marquee>
-                    <div class="wrap-card">
-                        <div class="card">
-                            <div class="card-content">
-                                <h2>Nama</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
-                            </div>
-                        </div>
-    
-                        <div class="card">
-                            <div class="card-content">
-                                <h2>Nama</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
-                            </div>
-                        </div>
-    
-                        <div class="card">
-                            <div class="card-content">
-                                <h2>Nama</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad repudiandae fuga facilis dicta fugiat voluptates deleniti libero earum sed aliquid.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <ul class="wrap-testi"></ul>
                 </marquee>
             </section>
 

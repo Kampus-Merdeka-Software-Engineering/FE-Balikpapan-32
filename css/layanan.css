@@ -200,68 +200,39 @@ footer .footer-location .location-icon{
         gap: 1rem;
     }
 
-    .content-section{
+    .content{
         background-color: #ffffff;
-        margin: 49px 40px 20px 40px;
+        margin: 5% 5%;
+        padding: 2%;
         box-shadow: 0 10px 10px rgba(40, 10, 10, 0.1);
+        text-align: justify;
     }
     
+    .intro h1{
+        font-size: 16px;
+    }
+    .intro p{
+        font-size: 12px;
+    }
     .intro img{
-        margin: 20px 20px 10px 20px;
-        width: 94%;
-        height:300px;
-        align-items: center;
-        object-fit: cover;
-    }
-    
-    .intro h1, p{
-        margin: 0 20px 0px 20px;
-        justify-content: center;
+        width: 100%;
+        height: 300px;
     }
     
     .offlineCons{
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-    }
-    .offlineCons img{
-        margin:20px 20px 10px 20px;
-        width: 352px;
-        height:208px;
-        object-fit: cover;
-    }
-    .offlineCons h1, p{
-        margin: 0 20px 10px 20px;
+        font-size: 10px;
+        align-items: center;
     }
     
     .onlineCons{
         display: flex;
-        flex-direction: column-reverse;
-        text-align: justify;
+        font-size: 10px;
+        align-items: center;
     }
-    .onlineCons img{
-        margin:10px 20px 10px 20px;
-        width: 352px;
-        height:208px;
-        object-fit: cover;
-    }
-    .onlineCons h1, p{
-        margin: 0 20px 10px 20px;
-    }
-    
+
     .seminarRutin{
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-    }
-    .seminarRutin img{
-        margin:10px 20px 10px 20px;
-        width: 352px;
-        height:208px;
-        object-fit: cover;
-    }
-    .seminarRutin h1, p{
-        margin: 0 20px 10px 20px;
+        font-size: 10px;
+        align-items: center;
     }
 }
 
@@ -283,9 +254,22 @@ footer .footer-location .location-icon{
         width: unset;
     }
 
-    .intro img{
-        width: 90%;
-        height: 270px;
+    .offlineCons{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .onlineCons{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .onlineCons img{
+        margin-left: 0;
+    }
+
+    .seminarRutin{
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     footer{

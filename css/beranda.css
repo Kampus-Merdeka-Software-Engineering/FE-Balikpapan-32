@@ -101,31 +101,28 @@ nav .toggle_btn{
     justify-content: space-around;
     background-color: #de1b51;
     width: 100%;
-    height: 750px;
+    height: 100vh;
 }
 
 .judul h1{
     margin-top: 159px;
     margin-left: 32px;
-    /* margin-right: 0px ; */
     color: #ffffff;
 }
 
 .judul p{
     margin-left: 32px;
-    /* margin-right: 0px; */
     color:#ffffff;
     margin-top: 60px;
 }
 
 .elemen-gambar img{
-    /* margin-left: 0px; */
     height: 100%;
     width: 850px;
 }
 
 .layanan{
-    margin:86px 48px 60px 48px;
+    margin:5%;
     text-align: justify;
 }
 
@@ -143,7 +140,6 @@ nav .toggle_btn{
 .wrap-layanan .card {
     width: 300px;
     height: 380px;
-    margin: 10px 20px 0 0;
     position: relative;
     box-shadow: 0 10px 10px rgba(0,0,0,.1);
     background-color: #ffffff;
@@ -163,11 +159,15 @@ nav .toggle_btn{
     margin: 0;  
 }
 
-#myBtn{
-    margin: 73px 135px 69px 135px;
-    padding: 10px 482px 10px 482px;
+.button-form{
     display: flex;
     justify-content: center;
+}
+
+#myBtn{
+    margin: 3% 10%;
+    padding: 1% 40%;
+    text-align: center;
     background-color: #de1b51;
     color: white;
     border: none;
@@ -277,8 +277,10 @@ nav .toggle_btn{
     margin-bottom: 10%;
     font-size: 48px;
 }
-.testimoni .wrap-card{
+
+.testimoni .wrap-testi{
     display: flex;
+    white-space: initial;
 }
 .testimoni .card {
     width: 220px;
@@ -291,6 +293,7 @@ nav .toggle_btn{
 .testimoni .card .card-content{
     padding: 10px 15px;
     font-size: 12px;
+    word-wrap: break-word;
 }
 
 .feedback-form{
@@ -376,68 +379,6 @@ footer .footer-location .location-icon{
     align-items: center;
 }
 
-/* responsive design */
-@media(max-width: 768px){
-    nav .links{
-        gap: 1rem;
-    }
-
-    .isi-section{
-        grid-template-columns: auto auto;
-        justify-content: center;
-    }
-
-    .card {
-        width: 300px;
-        height: 330px;
-        margin: 50px 0;
-        border-radius: 15px;
-    }
-}
-
-@media(max-width: 576px){
-    nav .links{
-        display: none;
-    }
-
-    nav .toggle_btn{
-        display: block;
-    }
-
-    .dropdown_menu{
-        display: block;
-    }
-
-    .dropdown_menu{
-        left: 2rem;
-        width: unset;
-    }
-    .isi-section{
-        grid-template-columns: auto;
-        justify-content: center;
-    }
-
-    footer{
-        flex-direction: column;
-        justify-content: space-around;
-        height: 240px;
-    }
-
-    footer .footer-links{
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-    }
-}
-
-#preloader{
-    background: #ffffff url(../Asset/loader.gif) no-repeat center center;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 100;
-}
-
 .modal {
     display: none;
     position: fixed;
@@ -518,4 +459,284 @@ footer .footer-location .location-icon{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* responsive design */
+@media(max-width: 768px){
+    nav .links{
+        gap: 1rem;
+    }
+
+    .hero-section{
+        font-size: 12px;
+        height: 400px;
+    }
+
+    .elemen-gambar img{
+        height: 100%;
+        width: auto;
+    }
+
+    .judul h1{
+        margin: 60px 0 0 0;
+    }
+
+    .judul p{
+        margin: 0;
+    }
+
+    .wrap-layanan .card {
+        width: 200px;
+        height: 300px;
+        font-size: 12px;
+    }
+
+    .wrap-layanan .head-card img {
+        height: 120px;
+    }
+
+    .wrap-about .perkenalan{
+        width: 120%;
+        background-color: #de1b51;
+        margin-right: 28px;
+        font-size: 12px;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    }
+    
+    .wrap-about .visi-misi{
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        padding: 24px 36px 24px 36px;
+    }
+
+    .konsultasi{
+        padding: 54px 44px 180px 44px;
+    }
+    .konsultasi h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 74px;
+        font-size: 48px;
+    }
+    .wrap-konsultasi{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .wrap-konsultasi .card {
+        width: 400px;
+        height: 350px;
+    }
+    
+    .wrap-konsultasi .head-card img {
+        height: 120px;
+    }
+    
+    .wrap-konsultasi .body-card h2{
+        font-size: 14px;
+    }
+    
+    .wrap-konsultasi .body-card h5{
+        color: #de1b51;
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .wrap-konsultasi .body-card .deskripsiKonsultasi{
+        font-size: 12px;
+    }
+
+    .testimoni{
+        height: 500px;
+    }
+
+    .submitfeedback{
+        width: 16%;
+    }
+
+    .modal {
+        padding-top: 10%;
+    }
+    
+    .modal-content {
+        width: 80%;
+    }
+}
+
+@media(max-width: 576px){
+    nav .links{
+        display: none;
+    }
+
+    nav .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+    .hero-section{
+        font-size: 8px;
+        height: 250px;
+    }
+
+    .elemen-gambar img{
+        height: 250px;
+        width: auto;
+    }
+
+    .judul h1{
+        margin: 70px 0 10px 0;
+    }
+
+    .wrap-layanan{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wrap-layanan .card {
+        width: 80%;
+        height: 150px;
+        position: relative;
+        margin: 5%;
+        display: flex;
+        box-shadow: 0 10px 10px rgba(0,0,0,.1);
+        background-color: #ffffff;
+    }
+    
+    .wrap-layanan .head-card img {
+        width: 173px;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .wrap-layanan .body-card {
+        padding: 10px 15px;
+    }
+    
+    .wrap-layanan .body-card h1 {
+        margin: 0;  
+    }
+
+    .about{
+        background-image: url(../Asset/Beranda-tentang/Backgroundred.png);
+        color: #ffffff;
+        height: 100vh;
+    }
+    .about h1{
+        display: flex;
+        padding-top: 54px;
+        justify-content: center;
+        font-size: 32px;
+    }
+    
+    .wrap-about{
+        padding:54px 32px 140px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrap-about .perkenalan{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        background-color: #de1b51;
+        margin-right: 0;
+        margin-bottom: 30%;
+        padding: 5%;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    }
+    
+    .wrap-about .visi-misi{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 5%;
+        background-color: #de1b51;
+        border-radius: 10px;
+        box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    }
+
+    .konsultasi{
+        padding: 3%;
+    }
+    .konsultasi h1{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 74px;
+        font-size: 48px;
+    }
+    .wrap-konsultasi{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .wrap-konsultasi .card {
+        display: flex;
+        width: 80%;
+        height: 150px;
+        margin: 10px 0 0 0;
+    }
+    
+    .wrap-konsultasi .head-card img {
+        width: 173px;
+        height: 100%;
+    }
+
+    .feedback-form{
+        height: 400px;
+    }
+    
+    .feedback-form h1{
+        font-size: 32px;
+    }
+    
+    .feedback-form .feedback{
+        padding: 6px 12px 20% 12px;
+    }
+
+    .submitfeedback{
+        margin-top: 3%;
+        width: 30%;
+    }
+
+    footer{
+        flex-direction: column;
+        justify-content: space-around;
+        height: 240px;
+    }
+
+    footer .footer-links{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .modal{
+        padding-top: 20%;
+    }
+
+    .modal-content h1{
+        font-size: 32px;
+    }
+}
+
+#preloader{
+    background: #ffffff url(../Asset/loader.gif) no-repeat center center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }

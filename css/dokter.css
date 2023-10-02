@@ -203,6 +203,14 @@ footer .footer-location .location-icon{
         margin: 50px 0;
         border-radius: 15px;
     }
+
+    .body-card h1{
+        font-size: 20px;
+    }
+
+    .body-card p{
+        font-size: 14px;
+    }
 }
 
 @media(max-width: 576px){

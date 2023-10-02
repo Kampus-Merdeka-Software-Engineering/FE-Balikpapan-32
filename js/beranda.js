@@ -67,3 +67,42 @@ document.addEventListener('DOMContentLoaded',function(){
         });
     });
 });
+
+const listTestimoni = [
+    {
+        name:"nama1",
+        testimoni:"hehe not bad",
+    },
+
+    {
+        name:"nama2",
+        testimoni:"hehe not bad huhuhhuheuhahfueaofboaeu",
+    },
+
+    {
+        name:"nama3",
+        testimoni:"hehe not bad huoaehfouaehfoahfouhaeuof",
+    },
+
+    {
+        name:"nama4",
+        testimoni:"hehe not bad faouehfouaehfoaeufo",
+    },
+
+    {
+        name:"nama5",
+        testimoni:"hehe not bad pajdpowjapidnfwipqfnp",
+    },
+];
+
+listTestimoni.forEach(Testi => {
+    const divTestimoni = document.querySelector(".wrap-testi");
+
+    divTestimoni.innerHTML = divTestimoni.innerHTML + `
+    <div class="card">
+        <div class="card-content">
+            <h2>${Testi.name}</h2>
+            <p>${Testi.testimoni}</p>
+        </div>
+    </div>`
+});

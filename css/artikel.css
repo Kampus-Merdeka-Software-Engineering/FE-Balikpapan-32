@@ -52,7 +52,7 @@ nav .links .current-page{
     color:#de1b51;
 }
 
-a:hover{
+nav a:hover{
     color: #de1b51;
 }
 
@@ -120,16 +120,34 @@ nav .toggle_btn{
 }
 
 .artikel-content{
-    display:flex;
-}
-.card {
     width: 100%;
-    height: auto;
-    grid-column: span 8;
-    margin: 10px 20px 0 0;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.artikel-content::-webkit-scrollbar {
+    display: none;
+}
+
+.artikel-content-vid{
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.artikel-content-vid::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: inline-block;
+    width: 250px;
+    height: 350px;
+    margin: 10px 6% 0 0;
     border-radius: 15px;
     background-color: #ffffff;
     position: relative;
+    overflow: hidden;
     box-shadow: 0 10px 10px rgba(0,0,0,.1);
 }
 
@@ -145,6 +163,12 @@ nav .toggle_btn{
 
 .body-card h1 {
     margin: 0;  
+}
+
+.card p{
+    overflow:hidden;
+    text-overflow: initial;
+    white-space: initial;
 }
 
 footer{
