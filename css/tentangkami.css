@@ -26,7 +26,7 @@ nav{
     justify-content: space-around;
     background-color: #ffffff;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 
@@ -80,7 +80,7 @@ nav .toggle_btn{
     /* backdrop-filter: blur(15px); */
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2;
+    z-index: 1;
 }
 
 .dropdown_menu.open{
@@ -133,17 +133,22 @@ nav .toggle_btn{
 
 .content{
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
 
 .intro{
     width: 100%;
     margin: 0 20px 0 10px;
+    background-color: rgba(255, 8, 93, 0.5);
+    padding: 1%;
+    border-radius: 5px;
 }
 
 .visi-misi{
     margin: 0 10px 0 0;
+    background-color: rgba(255, 8, 93, 0.5);
+    padding: 1%;
+    border-radius: 5px;
 }
 
 .team h2{
@@ -153,13 +158,13 @@ nav .toggle_btn{
     margin: 5%;
 }
 .wrap-card{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
     margin: 5%
 }
 .card {
     width: 200px;
-    height: 250px;
+    height: auto;
     margin: 60px 0;
     border-radius: 15px;
     position: relative;
@@ -220,6 +225,23 @@ footer .footer-location .location-icon{
     nav .links{
         gap: 1rem;
     }
+
+    .wrap-card{
+        grid-template-columns:auto auto auto;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+    
+    .intro{
+        margin: 0 0 10px;
+    }
+    
+    .visi-misi{
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
 }
 
 @media(max-width: 576px){
@@ -238,6 +260,10 @@ footer .footer-location .location-icon{
     .dropdown_menu{
         left: 2rem;
         width: unset;
+    }
+
+    .wrap-card{
+        grid-template-columns: auto auto;
     }
 
     footer{

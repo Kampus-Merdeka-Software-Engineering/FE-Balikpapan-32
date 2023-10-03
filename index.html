@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/beranda.css" />
+        <title>Caring is Loving</title>
+    </head>
+    
+    <body>
+        <div id="preloader"></div>
+        <header>
+            <!-- navbar -->
+            <nav>
+                <div class="logo">
+                    <a href="./beranda.html"><img  src="./Asset/Beranda Awal/Logo.png" height="45px" width="45px" alt="Logo Caring is Loving">Caring Is Loving</a>
+                </div>
+                <ul class="links">
+                    <li><a class="current-page" href="./beranda.html">Beranda</a></li>
+                    <li><a href="./html/layanan.html">Layanan</a></li>
+                    <li><a href="./html/dokter.html">Dokter</a></li>
+                    <li><a href="./html/artikel.html">Artikel</a></li>
+                    <li><a href="./html/tentangkami.html">Tentang Kami</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <!-- dropdown menu -->
+            <div class="dropdown_menu">
+                <li><a href=".index.html">Beranda</a></li>
+                <li><a href="./html/layanan.html">Layanan</a></li>
+                <li><a href="./html/dokter.html">Dokter</a></li>
+                <li><a href="./html/artikel.html">Artikel</a></li>
+                <li><a href="./html/tentangkami.html">Tentang Kami</a></li>
+            </div>
+        </header>
+
+            <section class="hero-section">
+                <div class="judul">
+                    <h1>Kesehatan Mentalmu, Tanggung Jawab <br>
+                        Kita, Konsultasikan Kegelisahanmu <br>
+                        Dan Bersama <br>
+                        Kita Ciptakan Dunia Yang Lebih <br>
+                        Baik</h1>
+
+                    <p>
+                        Kami memberikan layanan <br>
+                        psikolog profesional secara online <br>
+                        dan maupun offline untuk <br>
+                        menjaga kesehatan mental mu <br>
+                        dan menciptakan dunia yang <br>
+                        lebih baik
+                    </p>
+                </div>
+                <div class="elemen-gambar">
+                    <img src="./Asset/Beranda Awal/elemen.png" alt="">
+                </div>
+            </section>
+
+            <section class="layanan">
+                <h1>Layanan Kami</h1>
+                <div class="wrap-layanan">
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Layanan/Konsul Offline.jpg" alt="konseling offline">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Offline</h2>
+                            <p>Kamu bisa Konseling dengan
+                                datang langsung ke Layanan
+                                kami secara offline, dengan
+                                tempat yang nyaman untuk
+                                bercerita.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Layanan/Konsul Online.jpg" alt="konseling online">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Online</h2>
+                            <p>Dengan Konseling online kamu
+                                bisa memilih jadwal dan tempat
+                                sesuai dengan kenyamananmu.</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Layanan/Seminar Rutin.jpg" alt="seminar rutin">
+                        </div>
+                        <div class="body-card">
+                            <h2>Seminar Rutin</h2>
+                            <p>Kami mempunyai agenda
+                                seminar ruting melalui Zoom
+                                Meeting dengan topik
+                                kesehatan mental yang menarik
+                                untuk dibahas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-form">
+                    <button id="myBtn">Daftar Sekarang</button>
+                </div>
+
+                <form action="" id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Form Pendaftaran</h1>
+                        <div class="isian-form">
+                            <label for="name">Nama</label>
+                            <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama-form" required>
+
+                            <label for="email">Email</label>
+                            <input class="isi" type="email" placeholder="Masukkan Email Anda..." name="email" required>
+
+                            <label for="konseling">Jenis Konseling</label>
+                            <select id="konseling" class="isi" name="konseling"required>
+                            <option value="" disabled selected hidden>---Pilih Jenis Konseling---</option>
+                            <option value="konselingoffline">Konseling Offline</option>
+                            <option value="konselingonline">Konseling Online</option>
+                            <option value="seminar">Seminar Rutin</option>
+                            </select> 
+
+
+                            <label for="dokter">Pilih Dokter</label>
+                            <select id="dokter" name="dokter" class="isi" required>
+                            <option value="" disabled selected hidden>---Pilih jenis konseling terlebih dahulu---</option>
+
+                            </select>
+                        </div>
+                        <div class="button-submit-formulir">
+                            <button type="submit" id="submitForm" class="submit-formulir" value="kirimForm">Daftar</button>
+                        </div>
+                    </div>
+                    </form>
+            </section>
+
+            <section class="about">
+                <h1>Tentang Caring Is Loving</h1>
+                <div class="wrap-about">
+                    <div class="perkenalan">
+                        <h2>Caring is Loving</h2>
+                        <p>Caring is Loving adalah perusahaan yang bergerak di bidang layanan kesehatan mental.
+                        Kami peduli dengan kesehatan mental karena mempengaruhi kesejahteraan seseorang.
+                        Oleh karena itu kami menawarkan berbagai layanan untuk membantu menangani masalah kesehatan mental kalian.</p>
+                    </div>
+                    <div class="visi-misi">
+                        <p>Caring is Loving hadir karena mempunyai tanggung jawab
+                            menjaga kesehatan mental bagi semua untuk menciptakan dunia yang lebih baik</p>
+                        <h3>Visi</h3>
+                        <p>Menemukan keberanian dalam menciptakan perubahan</p>
+                        <h3>Misi</h3>
+                        <p>1. Memberikan kemudahan layanan bagi semua <br>
+                            2. Meningkatkan kesehatan dan pemahaman tentang kesehatan mental</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="konsultasi">
+                <h1>Paket Konsultasi</h1>
+                <div class="wrap-konsultasi">
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Paket Konsultasi/Paket Offline Individu.jpg" alt="Paket Offline Individu">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Offline Individu</h2>
+                            <h5>Rp399.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Berlokasi di kota Balikpapan</li>
+                                <li>Bertemu langsung dengan dokter</li>
+                                <li>Konsultasi selama 1 jam</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Paket Konsultasi/Konseling Offline Paket Bersama.jpg" alt="Paket Offline Berpasangan">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Offline Berpasangan</h2>
+                            <h5>Rp459.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Berlokasi di kota Balikpapan</li>
+                                <li>Bertemu langsung dengan dokter</li>
+                                <li>Konsultasi selama 1 jam</li>
+                                <li>Bersama pasangan</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Paket Konsultasi/Konseling Online Paket Individu.jpg" alt="Paket Online Individu">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Online Individu</h2>
+                            <h5>Rp199.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Dilakukan via zoom meeting</li>
+                                <li>fleksibel</li>
+                                <li>Konsultasi selama 1 jam</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="head-card">
+                            <img src="./Asset/Beranda/Beranda Paket Konsultasi/Konseling Online Paket Bersama.jpg" alt="Paket Online Berpasangan">
+                        </div>
+                        <div class="body-card">
+                            <h2>Konseling Online Berpasangan</h2>
+                            <h5>Rp259.000,-</h5>
+                            <ul class="deskripsiKonsultasi">
+                                <li>Dilakukan via zoom meeting</li>
+                                <li>fleksibel</li>
+                                <li>Konsultasi selama 1 jam</li>
+                                <li>Bersama pasangan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimoni">
+                <h1>Testimoni</h1>
+                <marquee>
+                    <ul class="wrap-testi"></ul>
+                </marquee>
+            </section>
+
+            <section class="feedback-form">
+                <h1>Berikan Feedbackmu</h1>
+                <div class="wrap-feedback">
+                    <input class="nama" type="text" placeholder="Masukkan Nama Anda (Boleh Anonim)..." name="nama-feedback" required>
+                    <textarea class="feedback" type="comment" placeholder="Ceritakan pengalamanmu bersama kami..." name="feedback" required></textarea>
+                    <button type="submit" class="submitfeedback">Submit</button>
+                </div>
+            </section>
+            
+
+        <footer>
+            <div id="social" class="socmed">
+                <h1>Social Media</h1>
+                <div class="socmed-icon">
+                    <a href="http://instagram.com"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://x.com"><i class="fa-brands fa-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://facebook.com"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://linkedin.com"><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
+                    <a href="http://web.whatsapp.com"><i class="fa-brands fa-whatsapp fa-2xl" style="color: #ffffff;"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <li><a href="./html/index.html">Beranda</a></li>
+                <li><a href="./html/layanan.html">Layanan</a></li>
+                <li><a href="./html/dokter.html">Dokter</a></li>
+                <li><a href="./html/artikel.html">Artikel</a></li>
+                <li><a href="./html/tentangkami.html">Tentang Kami</a></li>
+            </div>
+
+            <div class="footer-location">
+                <div class="location-icon">
+                    <i class="fa-solid fa-location-dot fa-2xl" style="color: #ffffff;"></i>
+                    <h1>Alamat Kami</h1>
+                </div>
+                <p>Jl. DI. Panjaitan Balikpapan Kalimantan Timur</p>
+            </div>
+        </footer>
+        
+    </body>
+    <script src="./js/beranda.js"></script>
+</html>
+</html>

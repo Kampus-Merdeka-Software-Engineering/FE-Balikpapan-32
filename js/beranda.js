@@ -68,6 +68,30 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 });
 
+
+const formDaftar = document.getElementById("myModal");
+formDaftar.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formNamaLengkap = document.getElementsByName("nama-form");
+    const formEmail = document.getElementsByName("email");
+    const formKonseling = document.getElementsByName("konseling");
+    const formDokter = document.getElementsByName("dokter");
+
+    if (formNamaLengkap.value=="" || formEmail.value=="" || formKonseling.value=="" || formDokter.value==""){
+        alert("Ensure you input a value in both fields!");
+    } else {
+        alert("This form has been successfully submitted!");
+        formDaftar.style.display ="none";
+    console.log(`Terima kasih ${formNamaLengkap.value} email ${formEmail.value} konseling ${formKonseling.value} dokter ${formDokter.value}`);
+
+    formNamaLengkap.value ="";
+    formEmail.value="";
+    formKonseling.value="";
+    formDokter.value="";
+    };
+});
+
 const listTestimoni = [
     {
         name:"nama1",

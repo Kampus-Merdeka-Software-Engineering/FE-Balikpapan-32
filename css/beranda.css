@@ -26,7 +26,7 @@ nav{
     justify-content: space-around;
     background-color: #ffffff;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 
@@ -80,7 +80,7 @@ nav .toggle_btn{
     /* backdrop-filter: blur(15px); */
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 2;
+    z-index: 1;
 }
 
 .dropdown_menu.open{
@@ -588,6 +588,10 @@ footer .footer-location .location-icon{
         height: 250px;
     }
 
+    .hero-section .judul h1{
+        font-size: 10px;
+    }
+
     .elemen-gambar img{
         height: 250px;
         width: auto;
@@ -605,7 +609,7 @@ footer .footer-location .location-icon{
     
     .wrap-layanan .card {
         width: 80%;
-        height: 150px;
+        height: auto;
         position: relative;
         margin: 5%;
         display: flex;
@@ -686,7 +690,7 @@ footer .footer-location .location-icon{
     .wrap-konsultasi .card {
         display: flex;
         width: 80%;
-        height: 150px;
+        height: auto;
         margin: 10px 0 0 0;
     }
     
