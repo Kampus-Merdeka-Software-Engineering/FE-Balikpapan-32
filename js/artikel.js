@@ -24,6 +24,13 @@ const listArtikel = [
         link:"http://instagram.com",
         image:"../Asset/Beranda/Beranda Awal/Element Beranda 1.png",
         name: "Judul 1",
+        description: "Lorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafoooLorem ipsum dolor sit amet lorem ipsum adimaidmanofeafooo",
+    },
+
+    {
+        link:"http://instagram.com",
+        image:"../Asset/Beranda/Beranda Awal/Element Beranda 1.png",
+        name: "Judul 1",
         description: "Lorem ipsum dolor sit amet lorem ipsum adimaidmanofeafooo",
     },
 

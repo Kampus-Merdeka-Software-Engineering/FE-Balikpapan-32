@@ -49,11 +49,19 @@ a{
 }
 
 nav .links .current-page{
-    color:#de1b51;
+    color:#ffffff;
+    background-color: #de1b51;
+    font-weight: 600;
+    padding : 12px 8px;
+    border-radius: 5px;
 }
 
-a:hover{
-    color: #de1b51;
+nav a:hover{
+    color:#ffffff;
+    background-color: #de1b51;
+    font-weight: 600;
+    padding : 12px 8px;
+    border-radius: 5px;
 }
 
 nav .links{
@@ -121,6 +129,10 @@ nav .toggle_btn{
     padding: 2%;
     box-shadow: 0 10px 10px rgba(40, 10, 10, 0.1);
     text-align: justify;
+}
+
+.content .intro h1{
+    margin: 2% 0 1% 0;
 }
 
 .intro img{

@@ -49,11 +49,19 @@ a{
 }
 
 nav .links .current-page{
-    color:#de1b51;
+    color:#ffffff;
+    background-color: #de1b51;
+    font-weight: 600;
+    padding : 12px 8px;
+    border-radius: 5px;
 }
 
-a:hover{
-    color: #de1b51;
+nav a:hover{
+    color:#ffffff;
+    background-color: #de1b51;
+    font-weight: 600;
+    padding : 12px 8px;
+    border-radius: 5px;
 }
 
 nav .links{
@@ -98,7 +106,7 @@ nav .toggle_btn{
 
 .hero-section{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: #de1b51;
     width: 100%;
     height: 100vh;
@@ -108,17 +116,50 @@ nav .toggle_btn{
     margin-top: 159px;
     margin-left: 32px;
     color: #ffffff;
+    animation: slidebottom 2s ease 0s 1 normal forwards;
 }
 
 .judul p{
     margin-left: 32px;
     color:#ffffff;
     margin-top: 60px;
+    animation: slideright 4s ease 0s 1 normal forwards;
 }
 
 .elemen-gambar img{
     height: 100%;
     width: 850px;
+    animation: slideleft 5s ease 0s 1 normal forwards;
+}
+
+@keyframes slidebottom {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideright {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideleft {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
 
 .layanan{
