@@ -56,7 +56,7 @@ nav .links .current-page{
     border-radius: 5px;
 }
 
-nav a:hover{
+nav .links a:hover{
     color:#ffffff;
     background-color: #de1b51;
     font-weight: 600;
