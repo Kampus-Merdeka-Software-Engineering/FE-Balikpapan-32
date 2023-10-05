@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -170,13 +170,17 @@ nav .toggle_btn{
 }
 
 .body-card h1 {
-    margin: 0;  
+    /* text-overflow: initial; */
+    white-space: initial;
+    margin: 0; 
+    font-size: 14px; 
 }
 
 .card p{
     overflow:hidden;
-    text-overflow: initial;
-    white-space: initial;
+    /* text-overflow: initial; */
+    white-space:initial;
+    font-size: 12px;
 }
 
 footer{
