@@ -37,11 +37,13 @@ formBtn.onclick = function() {
 // Menutup formulir ketika meng-klik span close
 span.onclick = function() {
     modal.style.display = "none";
+    formDaftar.reset();
 };
 // Menutup formulir ketika meng-klik di luar form
 window.onclick = function(event) {
     if (event.target == modal) {
     modal.style.display = "none";
+    formDaftar.reset();
 };
 };
 
@@ -68,54 +70,49 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 });
 
-
+const formNamaLengkap = document.getElementsByName("nama-form");
+const formEmail = document.getElementsByName("email");
+const formKonseling = document.getElementsByName("konseling");
+const formDokter = document.getElementsByName("dokter");
+// Menampilkan form daftar dan meng-close form daftar
 const formDaftar = document.getElementById("myModal");
 formDaftar.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    const formNamaLengkap = document.getElementsByName("nama-form");
-    const formEmail = document.getElementsByName("email");
-    const formKonseling = document.getElementsByName("konseling");
-    const formDokter = document.getElementsByName("dokter");
 
     if (formNamaLengkap.value=="" || formEmail.value=="" || formKonseling.value=="" || formDokter.value==""){
         alert("Ensure you input a value in both fields!");
     } else {
         alert("This form has been successfully submitted!");
         formDaftar.style.display ="none";
-    console.log(`Terima kasih ${formNamaLengkap.value} email ${formEmail.value} konseling ${formKonseling.value} dokter ${formDokter.value}`);
 
-    formNamaLengkap.value ="";
-    formEmail.value="";
-    formKonseling.value="";
-    formDokter.value="";
+    formDaftar.reset();
     };
 });
 
 const listTestimoni = [
     {
-        name:"nama1",
-        testimoni:"hehe not bad",
+        name:"Demo",
+        testimoni:"Terima kasih Caring is Loving",
     },
 
     {
-        name:"nama2",
-        testimoni:"hehe not bad huhuhhuheuhahfueaofboaeu",
+        name:"Nanang",
+        testimoni:"Caring is Loving sangat membantu saya dalam menyembuhkan kesehatan mental saya",
     },
 
     {
-        name:"nama3",
-        testimoni:"hehe not bad huoaehfouaehfoahfouhaeuof",
+        name:"Anonymous aja gapapa kan ya heheh",
+        testimoni:"Dokter di caring is loving baik bangettt",
     },
 
     {
-        name:"nama4",
-        testimoni:"hehe not bad faouehfouaehfoaeufo",
+        name:"Caring is Loving lovers",
+        testimoni:"Saya cinta caring is loving",
     },
 
     {
-        name:"nama5",
-        testimoni:"hehe not bad pajdpowjapidnfwipqfnp",
+        name:"Amnyamnyam emm kenyangg",
+        testimoni:"Sangat membantu",
     },
 ];
 
