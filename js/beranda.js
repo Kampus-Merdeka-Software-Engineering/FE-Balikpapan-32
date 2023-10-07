@@ -53,9 +53,9 @@ document.addEventListener('DOMContentLoaded',function(){
     const selectDokter = document.getElementById('dokter');
     // Mapping jenis konseling -> Pilihan dokter
     const doctorMap = {
-        "konselingoffline" : ["Dr. Ernest Sopata", "Dr. Luke Ishman", "Dr. Michael Morva", "Dr. Mia Goudy"],
-        "konselingonline" : ["Dr. Ernest Sopata", "Dr. Kaden Dez", "Dr. Luke Ishman", "Dr. Lydia Weyker", "Dr. Michael Morva", "Dr. Mia Goudy"],
-        "seminar" : ['Tidak perlu memilih dokter']
+        "Konseling Offline" : ["Dr. Ernest Sopata", "Dr. Luke Ishman", "Dr. Michael Morva", "Dr. Mia Goudy"],
+        "Konseling Online" : ["Dr. Ernest Sopata", "Dr. Kaden Dez", "Dr. Luke Ishman", "Dr. Lydia Weyker", "Dr. Michael Morva", "Dr. Mia Goudy"],
+        "Seminar Rutin" : ['-']
     };
     selectKonseling.addEventListener('change',function(){
         const selectedKonseling = selectKonseling.value;
@@ -88,6 +88,8 @@ formDaftar.addEventListener("submit", (e) => {
     formDaftar.reset();
     };
 });
+
+
 
 const listTestimoni = [
     {
@@ -127,3 +129,77 @@ listTestimoni.forEach(Testi => {
         </div>
     </div>`
 });
+
+// --------------------------------------------------------------------------------------------------------------------------//
+const API_BASE_URL = 'https://be-balikpapan-32-production.up.railway.app';
+
+// modal.addEventListener('submit', submitForm);
+// // window.addEventListener('DOMContentLoaded', fetchData);
+// async function submitForm(event){
+//     event.preventDefault();
+
+//     const formData = new FormData(modal);
+
+//     const bookingData = {
+//         nama: formData.get('nama-form'),
+//         email: formData.get('email'),
+//         jenis_konseling: formData.get('konseling'),
+//         pilihan_dokter: formData.get('dokter'),
+//     }
+//     console.log(bookingData);
+//     try{
+//         const response = await fetch(`${API_BASE_URL}/pendaftaran/`,{
+//             method: "POST",
+//             headers: {
+//                 'Content-Type':'application/json'
+//             },
+//             mode: 'no-cors',
+//             body: JSON.stringify(bookingData)
+//         });
+//         const result = response.json();
+//         console.log (result)
+//     } catch (error) {
+//         console.error('Error adding message:',error);
+//     }
+// }
+
+const submitForm = document.getElementById("submitForm");
+// Memunculkan formulir
+submitForm.onclick = function(){
+    const inputElementNama = document.querySelector('input[name="nama-form"]');
+    const namaValue = inputElementNama.value;
+    const inputElementEmail = document.querySelector('input[name="email"]');
+    const emailValue = inputElementEmail.value;
+    const inputElementKonseling = document.querySelector('select[name="konseling"]');
+    const konselingValue = inputElementKonseling.value;
+    const inputElementDokter = document.querySelector('select[name="dokter"]');
+    const dokterValue = inputElementDokter.value;
+
+    let postData = {
+        id: 1,
+        nama: namaValue,
+        email: emailValue,
+        jenis_konseling: konselingValue,
+        pilihan_dokter: dokterValue,
+    }
+        fetch(`${API_BASE_URL}/pendaftaran/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postData) 
+        })
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Ada error');
+        }
+        return response.json(); 
+        })
+        .then(resp => {
+        console.log(`Terimakasih ${resp.data.nama} dengan email ${resp.data.email}, sudah mendaftar pada ${resp.data.jenis_konseling}, dengan dokter ${resp.data.pilihan_dokter}`);
+
+        })
+        .catch(error => {
+        console.error('POST request error:', error);
+        });      
+};

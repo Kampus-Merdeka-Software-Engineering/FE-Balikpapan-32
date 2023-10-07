@@ -115,23 +115,23 @@
                     <button id="myBtn">Daftar Sekarang</button>
                 </div>
 
-                <form action="" id="myModal" class="modal">
+                <form action="" id="myModal" class="modal" method="post">
                     <div class="modal-content">
                         <span class="close">&times;</span>
                         <h1>Form Pendaftaran</h1>
                         <div class="isian-form">
                             <label for="name">Nama</label>
-                            <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama-form" required>
+                            <input class="isi" type="text" placeholder="Masukkan Nama Anda..." name="nama-form" id="nama-form" required>
 
                             <label for="email">Email</label>
-                            <input class="isi" type="email" placeholder="Masukkan Email Anda..." name="email" required>
+                            <input class="isi" type="email" placeholder="Masukkan Email Anda..." name="email" id="email" required>
 
                             <label for="konseling">Jenis Konseling</label>
-                            <select id="konseling" class="isi" name="konseling"required>
+                            <select id="konseling" class="isi" name="konseling" required>
                             <option value="" disabled selected hidden>---Pilih Jenis Konseling---</option>
-                            <option value="konselingoffline">Konseling Offline</option>
-                            <option value="konselingonline">Konseling Online</option>
-                            <option value="seminar">Seminar Rutin</option>
+                            <option value="Konseling Offline">Konseling Offline</option>
+                            <option value="Konseling Online">Konseling Online</option>
+                            <option value="Seminar Rutin">Seminar Rutin</option>
                             </select> 
 
 
@@ -142,7 +142,7 @@
                             </select>
                         </div>
                         <div class="button-submit-formulir">
-                            <button type="submit" id="submitForm" class="submit-formulir" value="kirimForm">Daftar</button>
+                            <button type="submit" id="submitForm" class="submit-formulir" value="kirimForm" form="myModal">Daftar</button>
                         </div>
                     </div>
                     </form>
