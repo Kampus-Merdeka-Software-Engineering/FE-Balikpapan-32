@@ -245,10 +245,10 @@
 
             <section class="feedback-form">
                 <h1>Berikan Feedbackmu</h1>
-                <form class="wrap-feedback">
+                <form id="feedbackForm" action="" class="wrap-feedback" method="post">
                     <input class="nama" type="text" placeholder="Masukkan Nama Anda (Boleh Anonim)..." name="nama-feedback" maxlength = "30" required>
-                    <textarea class="feedback" type="comment" placeholder="Ceritakan pengalamanmu bersama kami..." name="feedback" maxlength = "300" required></textarea>
-                    <button type="submit" class="submitfeedback" value="submit-feedback">Submit</button>
+                    <textarea class="feedback" id="myFeedback" placeholder="Ceritakan pengalamanmu bersama kami..." name="feedback" maxlength = "190" required></textarea>
+                    <button type="submit" class="submitfeedback" value="submit-feedback" id="submit-feedback">Submit</button>
                 </form>
             </section>
 

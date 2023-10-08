@@ -26,61 +26,40 @@ const myFunction = (e) => {
 
 socialMedia.addEventListener('click', myFunction, false);
 
-const listTeam = [
-    {
-        image : "../Asset/Dokter/dr. Ernest Sopata.jpg",
-        role : "Project Leader",
-        name : "Denilson",
-        prodi : "???",
-        univ : "???",
-    },
-
-    {
-        image : "../Asset/Dokter/dr. Ernest Sopata.jpg",
-        role : "Frontend Developer",
-        name : "Fajar",
-        prodi : "???",
-        univ : "???",
-    },
-
-    {
-        image : "../Asset/Dokter/dr. Ernest Sopata.jpg",
-        role : "Backend Developer",
-        name : "Hana",
-        prodi : "???",
-        univ : "???",
-    },
-
-    {
-        image : "../Asset/Dokter/dr. Ernest Sopata.jpg",
-        role : "Backend Developer",
-        name : "Zakia",
-        prodi : "???",
-        univ : "???",
-    },
-
-    {
-        image : "../Asset/Dokter/dr. Ernest Sopata.jpg",
-        role : "Quality Assurance",
-        name : "Auliyah",
-        prodi : "???",
-        univ : "???",
-    },
-];
-
-listTeam.forEach(member => {
-    const divTeam = document.querySelector(".wrap-card");
-
-    divTeam.innerHTML = divTeam.innerHTML + `
-    <div class="card">
-        <div class="head-card">
-            <img src="${member.image}" alt="">
-        </div>
-        <div class="body-card">
-            <h1>${member.role}</h1>
-            <p>${member.name}</p>
-            <p>${member.prodi}</p>
-            <p>${member.univ}</p>
-        </div>
-    </div>`
-});
+// -------------------------------------------------------------------------------------------------------------//
+const API_BASE_URL = 'https://be-balikpapan-32-production.up.railway.app';
+fetch(`${API_BASE_URL}/ourteam/`)
+.then(function(response) {
+    // Periksa apakah responsenya berhasil (kode status 200)
+    if (!response.ok) {
+        throw new Error('Ada masalah saat mengambil data.');
+    }
+    
+    // Konversi responsenya ke JSON
+    return response.json();
+    })
+    .then(function(data) {
+    // Data JSON tersedia di sini
+    console.log(data);
+    //Menampilkan di halaman web
+    data.forEach(data => {
+        const divTeam = document.querySelector(".wrap-card");
+    
+        divTeam.innerHTML = divTeam.innerHTML + `
+        <div class="card">
+            <div class="head-card">
+                <img src="${data.image}" alt="">
+            </div>
+            <div class="body-card">
+                <h1>${data.role}</h1>
+                <p>${data.nama}</p>
+                <p>${data.prodi}</p>
+                <p>${data.Univ}</p>
+            </div>
+        </div>`
+    });
+    })
+    .catch(function(error) {
+    // Tangani kesalahan jika ada
+    console.error('Terjadi kesalahan:', error);
+    });

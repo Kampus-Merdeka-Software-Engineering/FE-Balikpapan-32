@@ -85,7 +85,6 @@ nav .toggle_btn{
     height: 0;
     width: 80%;
     background: rgba(255, 255, 255, 1);
-    /* backdrop-filter: blur(15px); */
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 1;
@@ -321,11 +320,13 @@ nav .toggle_btn{
 
 .testimoni .wrap-testi{
     display: flex;
+    width: max-content;
+    overflow-x: auto;
     white-space: initial;
 }
 .testimoni .card {
     width: 220px;
-    height: auto;
+    height: 260px;
     margin: 0 20px 0 20px;
     box-shadow: 0 10px 10px rgba(0,0,0,.1);
     background-color: #ffffff;

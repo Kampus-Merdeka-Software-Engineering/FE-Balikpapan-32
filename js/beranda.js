@@ -89,82 +89,25 @@ formDaftar.addEventListener("submit", (e) => {
     };
 });
 
+const feedbackNama = document.getElementsByName("nama-feedback");
+const feedbackTesti = document.getElementsByName("feedback");
+const formFeedback = document.getElementById("feedbackForm");
+formFeedback.addEventListener("submit", (e) => {
+    e.preventDefault();
 
+    if (feedbackNama.value=="" || feedbackTesti.value==""){
+        alert("Ensure you input a value in both fields!");
+    } else {
+        alert("This form has been successfully submitted!");
 
-const listTestimoni = [
-    {
-        name:"Demo",
-        testimoni:"Terima kasih Caring is Loving",
-    },
-
-    {
-        name:"Nanang",
-        testimoni:"Caring is Loving sangat membantu saya dalam menyembuhkan kesehatan mental saya",
-    },
-
-    {
-        name:"Anonymous aja gapapa kan ya heheh",
-        testimoni:"Dokter di caring is loving baik bangettt",
-    },
-
-    {
-        name:"Caring is Loving lovers",
-        testimoni:"Saya cinta caring is loving",
-    },
-
-    {
-        name:"Amnyamnyam emm kenyangg",
-        testimoni:"Sangat membantu",
-    },
-];
-
-listTestimoni.forEach(Testi => {
-    const divTestimoni = document.querySelector(".wrap-testi");
-
-    divTestimoni.innerHTML = divTestimoni.innerHTML + `
-    <div class="card">
-        <div class="card-content">
-            <h2>${Testi.name}</h2>
-            <p>${Testi.testimoni}</p>
-        </div>
-    </div>`
+    formFeedback.reset();
+    };
 });
 
 // --------------------------------------------------------------------------------------------------------------------------//
 const API_BASE_URL = 'https://be-balikpapan-32-production.up.railway.app';
-
-// modal.addEventListener('submit', submitForm);
-// // window.addEventListener('DOMContentLoaded', fetchData);
-// async function submitForm(event){
-//     event.preventDefault();
-
-//     const formData = new FormData(modal);
-
-//     const bookingData = {
-//         nama: formData.get('nama-form'),
-//         email: formData.get('email'),
-//         jenis_konseling: formData.get('konseling'),
-//         pilihan_dokter: formData.get('dokter'),
-//     }
-//     console.log(bookingData);
-//     try{
-//         const response = await fetch(`${API_BASE_URL}/pendaftaran/`,{
-//             method: "POST",
-//             headers: {
-//                 'Content-Type':'application/json'
-//             },
-//             mode: 'no-cors',
-//             body: JSON.stringify(bookingData)
-//         });
-//         const result = response.json();
-//         console.log (result)
-//     } catch (error) {
-//         console.error('Error adding message:',error);
-//     }
-// }
-
+// POST DATA TO DATABASE
 const submitForm = document.getElementById("submitForm");
-// Memunculkan formulir
 submitForm.onclick = function(){
     const inputElementNama = document.querySelector('input[name="nama-form"]');
     const namaValue = inputElementNama.value;
@@ -176,7 +119,6 @@ submitForm.onclick = function(){
     const dokterValue = inputElementDokter.value;
 
     let postData = {
-        id: 1,
         nama: namaValue,
         email: emailValue,
         jenis_konseling: konselingValue,
@@ -203,3 +145,69 @@ submitForm.onclick = function(){
         console.error('POST request error:', error);
         });      
 };
+
+const submitFeedback =document.getElementById('submit-feedback');
+submitFeedback.onclick = function(){
+    const inputNamaFeedback = document.querySelector('input[name="nama-feedback"]');
+    const namaFeedback= inputNamaFeedback.value;
+    const inputTestiFeedback = document.getElementById('myFeedback');
+    const testiFeedback= inputTestiFeedback.value;
+
+    let postFeedback = {
+        nama: namaFeedback,
+        pesan: testiFeedback,
+    }
+        fetch(`${API_BASE_URL}/feedback/`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(postFeedback) 
+        })
+        .then(response => {
+        if (!response.ok) {
+            throw new Error('Ada error');
+        }
+        return response.json();
+        })
+        .then(resp => {
+        console.log(`Nama: ${resp.data.nama} Pesan:${resp.data.pesan}`);
+
+        })
+        .catch(error => {
+        console.error('POST request error:', error);
+        });      
+}
+
+
+fetch(`${API_BASE_URL}/feedback/`)
+.then(function(response) {
+    // Periksa apakah responsenya berhasil (kode status 200)
+    if (!response.ok) {
+        throw new Error('Ada masalah saat mengambil data.');
+    }
+    
+    // Konversi responsenya ke JSON
+    return response.json();
+    })
+    .then(function(data) {
+    // Data JSON tersedia di sini
+    console.log(data);
+    //Menampilkan di halaman web
+    data.forEach(data => {
+        const divTestimoni = document.querySelector(".wrap-testi");
+    
+        divTestimoni.innerHTML = divTestimoni.innerHTML + `
+        <div class="card">
+            <div class="card-content">
+                <h2>${data.nama}</h2>
+                <p>${data.pesan}</p>
+            </div>
+        </div>`
+    });
+    })
+    .catch(function(error) {
+    // Tangani kesalahan jika ada
+    console.error('Terjadi kesalahan:', error);
+    });
+
