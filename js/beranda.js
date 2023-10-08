@@ -39,13 +39,6 @@ span.onclick = function() {
     modal.style.display = "none";
     formDaftar.reset();
 };
-// Menutup formulir ketika meng-klik di luar form
-window.onclick = function(event) {
-    if (event.target == modal) {
-    modal.style.display = "none";
-    formDaftar.reset();
-};
-};
 
 // Membuat mapping pada form
 document.addEventListener('DOMContentLoaded',function(){
